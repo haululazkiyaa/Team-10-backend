@@ -16,7 +16,9 @@ app.use(express.json());
 app.use(morgan("dev"));
 app.use(express.static("uploads"));
 
-
+app.get('/', (req, res) => {
+  res.send('API running!')
+})
 
 bootstrap(app);
 dbConnection();
